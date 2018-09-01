@@ -4,7 +4,7 @@ CmS Course Playground
 A Hands-On Repository for playing around with LaTeX and git
 
 LICENCE
-~~~~~~~
+-------
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
 International License. To view a copy of this license, visit
