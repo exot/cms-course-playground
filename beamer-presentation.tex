@@ -3,8 +3,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
+\usepackage{tikz}
+\usepackage{multimedia}
 
-\usetheme{Dresden}
+\usepackage[ngerman]{babel}
+\usetheme{Berlin}
 
 \usepackage{csquotes}
 
@@ -12,6 +15,9 @@
 \setbeamertemplate{navigation symbols}{}
 
 \usepackage{graphicx}
+
+\usepackage{tikz}
+\usepackage{tikzducks}
 
 \begin{document}
 
@@ -77,12 +83,21 @@
       Und Bilder gehen auch!
 
       \begin{center}
-        \includegraphics[width=\linewidth]{img/tex-lion.jpg}
+        \includegraphics[width=\linewidth]{img-lion.pdf}
       \end{center}
 
     \end{column}
   \end{columns}
 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tabellen}
+  \begin{tabular}{|c|c|}\hline
+   A & B \\ \hline
+   a11 & a12 \\ \hline
+   a21 & a22 \\ \hline
+ \end{tabular}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -94,7 +109,17 @@
   \item \verb!texdoc beameruserguide!
   \item \url{https://tex.stackexchange.com/}
   \item \url{https://www.dante.de/tex/TeXAnfaenger.html}
+  \item ganz allgemein DAS INTERNET!
   \end{itemize}
+
+  \onslide<+->
+
+  \begin{block}{oder einfach}
+    \begin{center}
+      Leute fragen \\\tikz{\duck}
+    \end{center}
+
+  \end{block}
 
 \end{frame}
 
@@ -108,6 +133,9 @@
 \begin{frame}
   \frametitle{Don'ts}
 
+  \begin{columns}
+    \begin{column}{0.45\linewidth}
+
   \begin{itemize}
   \item<+-> Videos einbetten
   \item<+-> \enquote{lustige} Einblendungen (das geht zwar, wird aber nicht von
@@ -115,9 +143,15 @@
   \item<+-> alles, was man sowieso nicht in Präsentationen machen sollte \ldots
   \end{itemize}
 
+    \end{column}
+    \begin{column}{0.45\linewidth}
+\movie[width=50mm,height=28mm,poster,externalviewer]{This land is mine. by Nina Paley}{ThisLandIsMine-byNinaPaley.mkv} % https://www.youtube.com/watch?v=4pKMV6e5kEo
+    \end{column}
+  \end{columns}
+
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
   \frametitle{WTF?}
 
   \onslide<+->
@@ -135,6 +169,12 @@
 
   {\tiny \url{https://en.wikipedia.org/wiki/Srinivasa_Ramanujan}}
 
+  \onslide<+->
+
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[rotate=40] at (current page.center) {{\Huge\color{red}\bfseries ALLES MIST!}};
+  \end{tikzpicture}
+
 \end{frame}
 
 \section{Fazit}
@@ -147,8 +187,12 @@
 \begin{frame}
   \frametitle{Und was soll das alles?}
 
+  \onslide<+->
+
   \begin{center}
-    \LaTeX{}-\texttt{beamer} fetzt!
+    \LaTeX{}-\texttt{beamer} fetzt! \\
+    \onslide<+->
+    \dots und Powerpoint ist doof \dots
   \end{center}
 
 \end{frame}
