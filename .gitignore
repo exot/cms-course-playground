@@ -6,3 +6,5 @@ beamer-presentation.pdf
 beamer-presentation.snm
 beamer-presentation.toc
 beamer-presentation.vrb
+/beamer-presentation.synctex.gz
+*.el
