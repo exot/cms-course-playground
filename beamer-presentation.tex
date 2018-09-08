@@ -13,6 +13,8 @@
 
 \usepackage{graphicx}
 
+\usepackage{tikz}
+
 \begin{document}
 
 \title{Eine kleine Präsentation}
@@ -117,7 +119,7 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
   \frametitle{WTF?}
 
   \onslide<+->
@@ -134,6 +136,12 @@
   \bigskip
 
   {\tiny \url{https://en.wikipedia.org/wiki/Srinivasa_Ramanujan}}
+
+  \onslide<+->
+
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[rotate=40] at (current page.center) {{\Huge\color{red}\bfseries ALLES MIST!}};
+  \end{tikzpicture}
 
 \end{frame}
 
