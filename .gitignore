@@ -6,4 +6,6 @@
 *.snm
 *.toc
 *.vrb
-auto/*
+/auto/*
+/beamer-presentation.synctex.gz
+*.el
