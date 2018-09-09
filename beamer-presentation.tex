@@ -3,19 +3,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
-\usepackage{tikz}
-\usepackage{multimedia}
 
-\usepackage[ngerman]{babel}
 \usetheme{Berlin}
-
-\usepackage{csquotes}
 
 % wichtig: üblicherweise ungenutzte Navigationssymbole ausblenden
 \setbeamertemplate{navigation symbols}{}
 
-\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{color,graphicx}
 
+\usepackage{multimedia}
 \usepackage{tikz}
 \usepackage{tikzducks}
 
@@ -145,8 +142,18 @@
 
     \end{column}
     \begin{column}{0.45\linewidth}
-\movie[width=50mm,height=28mm,poster,externalviewer]{This land is mine. by Nina Paley}{ThisLandIsMine-byNinaPaley.mkv} % https://www.youtube.com/watch?v=4pKMV6e5kEo
-    \end{column}
+\IfFileExists{ThisLandIsMine-byNinaPaley.mkv}{
+	\movie[width=50mm,height=28mm,poster,externalviewer]{%
+		\IfFileExists{ThisLandIsMine-byNinaPaley.jpeg}{
+			\includegraphics[width=50mm]{ThisLandIsMine-byNinaPaley.jpeg}
+		}{
+			This land is mine. by Nina Paley
+		}
+	}{ThisLandIsMine-byNinaPaley.mkv}
+}{
+	\url{https://www.youtube.com/watch?v=4pKMV6e5kEo}
+}
+	\end{column}
   \end{columns}
 
 \end{frame}
