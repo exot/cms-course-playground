@@ -1,3 +1,4 @@
+# products by latex
 *.aux
 *.log
 *.nav
@@ -6,8 +7,20 @@
 *.snm
 *.toc
 *.vrb
+
+# video/movie files
 *.mkv
 *.mp4
+
+# editor temporary files
 /auto/*
-/beamer-presentation.synctex.gz
 *.el
+
+# sync repository
+/beamer-presentation.synctex.gz
+
+# image files
+*.jpeg
+*.png
+*.jpg
+*.jpe
